@@ -37,7 +37,7 @@ public class GetExcelData {
 
 	//Getting excel data - passing every data as an object
 	@DataProvider
-	public Iterator<Object[]> getData() throws IOException {
+	public Object[][] getData() throws IOException {
 		XSSFSheet sheet1 = null;
 		XSSFSheet sheet2 = null;
 
@@ -78,7 +78,7 @@ public class GetExcelData {
 		 */
 		doWriteToExcel(workbook, sheet1, primaryKeys, result);
 
-		return null;
+		return new Object[0][0];
 
 	}
 
